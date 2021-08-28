@@ -7,7 +7,9 @@
 	    <link rel="stylesheet" type="text/css" href="css/estilos.css">
 	    <title>Canvas</title>
 	</head>
-	<body onload="draw();">
+
+	<body>
+
 	  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" aria-label="Tenth navbar example">
 	    <div class="container-fluid">
 	      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,19 +23,11 @@
 	          </li>
 
 	          <li class="nav-item">
-	            <a class="nav-link" href="#comoUtilizarla">¿Como utilizarla?</a>
+	            <a class="nav-link" href="#comoUtilizarla">¿Cómo utilizarla?</a>
 	          </li>
 
 	          <li class="nav-item">
-	            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Opcion 3</a>
-	          </li>
-
-	          <li class="nav-item">
-	            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Opcion 4</a>
-	          </li>
-
-	          <li class="nav-item">
-	            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Opcion 5</a>
+	            <a class="nav-link" href="#ejemplos">Ejemplos</a>
 	          </li>
 	          
 	        </ul>
@@ -65,39 +59,70 @@
 	          <p>Usar el elemento canvas no es algo muy díficil pero necesita saber y entender los aspectos básicos del HTML y JavaScript. El tamaño por defecto del canvas es 300px * 150px [ancho (width) * alto (height)]. Pero se puede personalizar el tamaño usando las propiedades height y width de CSS. Con el fin de dibujar gráficos en el lienzo canvas se utiliza un objeto de contexto de JavaScript que crea gráficos sobre la marcha.<br>
 	          El elemento canvas puede ser estilizado como a cualquier imagen normal (margin, border, background, etc). Estas reglas, sin embargo, no afectan a lo dibujado sobre el canvas.</p>
 
-	          <h3>Dibujado de rectangulos</h3>
-	          <p>Aquí hay tres funciones que podemos usar en el canvas para dibujarlos:<br><br>
-
-	          <b>fillRect(x, y, width, height)</b><br>
-				Dibuja un rectángulo relleno.<br><br>
-
-			  <b>strokeRect(x, y, width, height)</b><br>
-				Dibuja el contorno de un rectángulo.<br><br>
-
-			  <b>clearRect(x, y, width, height)</b><br>
-			  	Borra un área rectangular especificada, dejándola totalmente transparente.</p>
 	        </div>
 	    </div>
 
-	    
 
-	  </div>
+	    <div id="ejemplos" class="col-md-20">
+	        <div class="h-100 p-5 bg-light border rounded-3">
+	        	<h3>Dibujado de rectangulos</h3>
+		          <p>Aquí hay tres funciones que podemos usar en el canvas para dibujarlos:<br><br>
+
+		          <b>fillRect(x, y, width, height)</b><br>
+					Dibuja un rectángulo relleno.<br><br>
+
+				  <b>strokeRect(x, y, width, height)</b><br>
+					Dibuja el contorno de un rectángulo.<br><br>
+
+				  <b>clearRect(x, y, width, height)</b><br>
+				  	Borra un área rectangular especificada, dejándola totalmente transparente.<br><br>
+
+				  <h4>Ejemplo de rectangulos</h4>
+		          <center><canvas id="ejemplo-2" width="150" height="150">Su navegador no soporta canvas</canvas></center></p><br><br>
+
+
+		          <h3>Dibujado de arcos</h3>
+		          <p>Para dibujar un arco utilizamos el método:<br><br>
+		          <b>arc(x, y, r, ap, af, aC), donde</b><br><br>
+					- x , y son las coordenadas del centro<br>
+					- ap es el ángulo de partida ( en radianes )<br>
+					- af es el ángulo final ( en radianes )<br>
+					- cR ( contra reloj ) es la dirección<br></p>
+
+				  <h4>Ejemplo de arcos</h4>
+		          <center><canvas id="ejemplo-3" width="160" height="160">Su navegador no soporta canvas</canvas></center></p><br><br>
+
+		          <h3>Dibujado de lineas</h3>
+		          <p>Para dibujar una linea utilizamos el método:<br><br>
+		          <b>ctx.lineTo(a,b), donde</b><br><br>
+					- a , b es el punto de incio y fin de la linea<br>
+					-ctx.moveTo(x , y) no permite movernos en el plano</p>
+
+				  <h4>Ejemplo de linea</h4>
+		          <center><canvas id="ejemplo-4" width="160" height="160">Su navegador no soporta canvas</canvas></center></p>
+	        </div>
+	    </div>
 	  </main>
 
 	<div class="container">
 	  <footer class="py-3 my-4">
 	    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
 	      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
-	      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-	      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+	      <li class="nav-item"><a href="#comoUtilizarla" class="nav-link px-2 text-muted">¿Cómo utilizarla?</a></li>
+	      <li class="nav-item"><a href="#ejemplos" class="nav-link px-2 text-muted">Ejemplos</a></li>
 	    </ul>
-	    <p class="text-center text-muted">Creadores:</p>
+	    <h5 class="text-center text-muted">Creadores:</h5>
 	    <p class="text-center text-muted">Emanuel Jóse Molina Zuniga - MZ210716</p>
-	    <p class="text-center text-muted">Fuente:</p>
-	    <p class="text-center text-muted">https://developer.mozilla.org/es/docs/Web/API/Canvas_API/Tutorial</p>
+	    <p class="text-center text-muted">Alexia María Ayala Alférez - AA180552</p>
+	    <p class="text-center text-muted">Rudis Eduardo Benitez Reyes - BR202466</p>
+	    <p class="text-center text-muted">René Gerardo Castillo Monterrosa - CM210922</p>
+
+	    <h5 class="text-center text-muted">Biblografia:</h5>
+	    <p class="text-center text-muted"><a class="biblografia" target="_blank" href="https://developer.mozilla.org/es/docs/Web/API/Canvas_API/Tutorial"><b>MDM Web Docs</b></a></p>
 	  </footer>
 	</div>
 
 	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/funciones.js"></script>
 	</body>
 </html>
