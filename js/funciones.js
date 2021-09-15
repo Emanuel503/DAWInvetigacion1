@@ -13,7 +13,7 @@ var Y = circulo.height/2;
 var r = 75;
 contexto.strokeStyle = "#006400";
 contexto.fillStyle = "#6ab150";
-contexto.lineWidth = 5;
+contexto.lineWidth = 10;
 contexto.arc(X,Y,r,0,2*Math.PI);
 contexto.fill();
 contexto.stroke();
@@ -21,7 +21,7 @@ contexto.stroke();
   //Linea
 var linea = document.getElementById("ejemplo-4");
 var ctx = linea.getContext("2d");
-ctx.moveTo(10,10);
+ctx.moveTo(10,50);
 ctx.lineTo(180,180);
 ctx.strokeStyle = "#f00";
 ctx.stroke();
